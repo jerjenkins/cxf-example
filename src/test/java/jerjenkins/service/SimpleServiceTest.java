@@ -5,6 +5,8 @@ import com.google.common.base.Optional;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.math.BigInteger;
+
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
@@ -114,6 +116,11 @@ public class SimpleServiceTest {
                         "one hundred forty seven million " +
                         "four hundred eighty three thousand " +
                         "six hundred forty seven")));
+    }
+
+    @Test
+    public void should_stringify_110000000000000() {
+        assertThat(sut.stringify(new BigInteger("110000000000000")), is(Optional.of("one hundred ten trillion")));
     }
 
     @Test

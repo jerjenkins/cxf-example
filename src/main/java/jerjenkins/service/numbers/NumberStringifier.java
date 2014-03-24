@@ -156,8 +156,9 @@ public class NumberStringifier {
             buckets[0] = strInt.substring(0, highestOrderDigits);
         }
 
+        int offset = highestOrderDigits == 0?3:highestOrderDigits;
         for(int i = 1; i < buckets.length; i++) {
-            int begin = highestOrderDigits + ((i-1)*3);
+            int begin = offset + ((i-1)*3);
             buckets[i] = strInt.substring(begin, begin+3);
         }
 
