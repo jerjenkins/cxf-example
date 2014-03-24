@@ -1,0 +1,25 @@
+# build artifacts
+target/
+
+# IDE configuration
+.classpath
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# miscellaneous
+*.log
+.project
+.settings/
+.swo
+.swp
+.*.swp
+
+
+# log configuration
+log4j.properties
+/node_modules
+/.idea_modules
+/bower_components
+/logs
